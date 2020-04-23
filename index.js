@@ -20,10 +20,9 @@ function page (){
 }
 
 function classToggle() {
-    $('.shopping-item-toggle').on('click', event => {
-        const checked = $(event.currentTarget);
-        checked.toggleClass('shopping-item__checked');
-    });
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+      });
 }
 
 function deleteItem(){
